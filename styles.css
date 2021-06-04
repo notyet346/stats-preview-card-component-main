@@ -2,14 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
 *{
-	margin: 0;
-	padding: 0;
+	box-sizing: border-box;
 }
 
 body{
-	background-color: hsl(233, 47%, 7%);
-		
-	
+	background-color: hsl(233, 47%, 7%);			
 }
 
    /* ############
@@ -18,76 +15,88 @@ body{
 
 
 .card{
+	position: absolute;
+	top: 25%;
+	left: 15%;
+	
 
-	position: relative;
-	
-	font-size: 16px;
 	
 	
+	font-size: 1.2rem;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
- 
+	grid-template-columns: 50% 50%;
+	/*grid-auto-flow: column;*/
 	border-radius: 5px;	
-	margin: 10%;
 	overflow: hidden;
+	width: 70%;
+
 
 }
 
 .card-text{
-	padding: 10%;
+	font-family:Inter;
 	text-align: left;
 	background: hsl(244, 38%, 16%);
-
+	padding: 2em 3em 0 3em;
+	letter-spacing: 1px;
+	line-height: 1.2rem;
+	display: grid;
+	grid-template-rows: 30% 30% 40%;
 }
-h1 {
+.heading-text {
 	color: hsl(0, 0%, 100%);
-	font-family: Inter;
-	padding-top: 5%;
+	padding: 0;
+
 }
 
-h1 span{
+.heading-text span{
 	color: hsl(277, 64%, 61%);
 }
 
-p{
-	font-family:Lexend Deca;
-}
-.main-paragraph{
+.paragraph-text{
 	color: hsla(0, 0%, 100%, 0.75);
-	padding-top: 10%;
-}
-.stats{
-	display: flex;
-	padding-top: 20%;
+	padding-top: 0;
+	padding-bottom: 2%;
+	font-weight: lighter;
+
+	font-size: 0.8rem;
 }
 
-.stats p{
+.stats{
+	padding: 2% 2% 0 0;
+	display: grid;
+	grid-auto-flow: column;
+	color:hsla(0, 0%, 100%, 0.6);
+	align-content: center;
+}
+
+.stats{
 	color: hsl(0, 0%, 100%);
 	padding-right: 0.5rem; 
 	margin-right: 0.5rem;
 	text-transform: uppercase;
 	font-weight: bold;
+	padding-bottom: 0;
 }
 .stats span{
-	color: hsla(0, 0%, 100%, 0.75);
+	color: hsla(0, 0%, 100%, 0.6);
+
 	font-size: 10px;
-	font-weight: normal;	
+	font-weight: lighter;	
 }
 
 
 .card img{
 	width: 100%;
 	height: 100%;
-	border-radius: 0 5px 5px 0;	
-	
+	border-radius: 0 5px 5px 0;		
 	mix-blend-mode: multiply;
-
 }
 
-.footer {
+.header {
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
   height: 40px;
   background: hsl(244, 38%, 16%);
@@ -97,18 +106,27 @@ p{
 
 @media (max-width: 720px){
 
-	.card{
-		display: grid;
-		grid-template-columns: none;
-		grid-template-rows: auto auto;
-	}
 
+	.header{
+		position: relative;
+		left: 0;
+  		top: 0;
+
+	}
+	.card{
+		grid-template-columns: none;
+		position: relative;
+		top: 50px;
+		bottom: 50px;
+		font-size: 10px;
+
+	}
 	.stats{
-		display: block;
+		grid-auto-flow: row;
 		
 	}
 	.stats p{
-		padding: 5% 0 0 0; 
+		padding: 1% 0 1% 0; 
 	}
 	.card img{
 		order: 1;
@@ -117,7 +135,18 @@ p{
 	.card-text{
 		order:2;
 		text-align: center;	
+		padding: 2em;
+		grid-template-rows: 20% 30% 50%;
+
 	}
 }
 
 
+   /* ############
+	
+   ############ */
+
+
+   /* ############
+	
+   ############ */
