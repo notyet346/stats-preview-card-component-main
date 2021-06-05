@@ -39,7 +39,7 @@ body{
 	background: hsl(244, 38%, 16%);
 	padding: 2em 3em 0 3em;
 	letter-spacing: 1px;
-	line-height: 1.2rem;
+	line-height: 1.2;
 	display: grid;
 	grid-template-rows: 30% 30% 40%;
 }
