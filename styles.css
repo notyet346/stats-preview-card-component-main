@@ -6,46 +6,49 @@
 }
 
 body{
-	background-color: hsl(233, 47%, 7%);			
+	background-color: hsl(233, 47%, 7%);
+				
 }
 
    /* ############
 	
    ############ */
 
+.outer-container{
 
-.card{
-	position: absolute;
-	top: 25%;
-	left: 15%;
-	
-
-	
-	
-	font-size: 1.2rem;
-	display: grid;
-	grid-template-columns: 50% 50%;
-	/*grid-auto-flow: column;*/
-	border-radius: 5px;	
-	overflow: hidden;
-	width: 70%;
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 
 }
+.card{
+	font-size: 16px;
+	display: flex;
 
-.card-text{
+	/*grid-auto-flow: column;*/
+	border-radius: 10px;	
+	overflow: hidden;
+	width: 70%;
+}
+
+.card > *{ /* Equal width for every direct child of card*/
+	width: 100%;
+}
+
+.text-sec{
 	font-family:Inter;
 	text-align: left;
 	background: hsl(244, 38%, 16%);
-	padding: 2em 3em 0 3em;
+	padding: 2.6em 4em 0 3em;
 	letter-spacing: 1px;
 	line-height: 1.2;
-	display: grid;
-	grid-template-rows: 30% 30% 40%;
+	display: grid;	
 }
 .heading-text {
 	color: hsl(0, 0%, 100%);
 	padding: 0;
+	font-size: 30px;
 
 }
 
@@ -54,42 +57,36 @@ body{
 }
 
 .paragraph-text{
-	color: hsla(0, 0%, 100%, 0.75);
-	padding-top: 0;
-	padding-bottom: 2%;
+	color: hsla(0, 0%, 100%, 0.75);	
 	font-weight: lighter;
-
 	font-size: 0.8rem;
 }
 
-.stats{
-	padding: 2% 2% 0 0;
-	display: grid;
-	grid-auto-flow: column;
-	color:hsla(0, 0%, 100%, 0.6);
-	align-content: center;
-}
 
 .stats{
-	color: hsl(0, 0%, 100%);
-	padding-right: 0.5rem; 
-	margin-right: 0.5rem;
+	color: hsl(0, 0%, 100%);	
 	text-transform: uppercase;
 	font-weight: bold;
 	padding-bottom: 0;
+	display: flex;
+
+}
+.stats > *{
+	width: 100% ;
+}
+.stats p{
+	font-size: 18px;
 }
 .stats span{
 	color: hsla(0, 0%, 100%, 0.6);
-
 	font-size: 10px;
 	font-weight: lighter;	
 }
 
-
 .card img{
 	width: 100%;
 	height: 100%;
-	border-radius: 0 5px 5px 0;		
+	border-radius: 0 10px 10px 0;		
 	mix-blend-mode: multiply;
 }
 
@@ -114,29 +111,28 @@ body{
 
 	}
 	.card{
-		grid-template-columns: none;
-		position: relative;
-		top: 50px;
-		bottom: 50px;
 		font-size: 10px;
+		display: flex;
+
+		flex-wrap: wrap-reverse;
 
 	}
 	.stats{
-		grid-auto-flow: row;
-		
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;	
 	}
 	.stats p{
 		padding: 1% 0 1% 0; 
+		width:100%;
 	}
 	.card img{
-		order: 1;
 		border-radius: 5px 5px  0 0;
 	}
-	.card-text{
-		order:2;
+	.text-sec{
 		text-align: center;	
 		padding: 2em;
-		grid-template-rows: 20% 30% 50%;
+		grid-template-rows: 50% 50%;
 
 	}
 }
